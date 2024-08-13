@@ -24,7 +24,3 @@ If you dont know how to add a web extenesion to your browser follow the below st
 5. Click on Load unpacked and select the cloned repo folder.
 6. You should see the extension in your browser now.
 7. Go to any leetcode problem page, write the code and click on the extension icon to analyse the time and space complexity of the code and see suggestions to improve it.
-
-```
-
-```
