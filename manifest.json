@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode TC Analyzer",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "description": "Extracts code from LeetCode problems.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "index.html",
+    "run_at": "document_end"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
