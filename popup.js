@@ -1,5 +1,3 @@
-
-
 // Enter  your API_KEY from Gemini API
 const API_KEY = "";
 
@@ -9,7 +7,7 @@ const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/
 document.getElementById("clickme").addEventListener("click", function () {
   chrome.storage.local.get("extractedCode", async function (data) {
     const codeDisplay = document.getElementById("code");
-    document.getElementById('code').classList.remove('hidden');
+    document.getElementById("code").classList.remove("hidden");
     if (data.extractedCode) {
       const code = data.extractedCode;
 
@@ -50,7 +48,7 @@ document.getElementById("clickme").addEventListener("click", function () {
 document.getElementById("clickme2").addEventListener("click", function () {
   chrome.storage.local.get("extractedCode", async function (data) {
     const codeDisplay = document.getElementById("sugg");
-    document.getElementById('sugg').classList.remove('hidden');
+    document.getElementById("sugg").classList.remove("hidden");
     if (data.extractedCode) {
       const code = data.extractedCode;
 
