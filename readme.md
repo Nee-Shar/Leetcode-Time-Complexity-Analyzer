@@ -11,6 +11,7 @@ PS: It might not work in every case mayber refresh the page and try again.
 ## How to use
 
 If you dont know how to add a web extenesion to your browser follow the below steps:
+\n
 (why dont u know this already? :P)
 
 1. Clone the repo
