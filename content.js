@@ -3,7 +3,8 @@ function extractSortAndTrimCode() {
   const editorContainer = document.querySelector(
     "#editor > div.flex.flex-1.flex-col.overflow-hidden.pb-2 > div.flex-1.overflow-hidden > div > div > div.overflow-guard > div.monaco-scrollable-element.editor-scrollable.vs-dark"
   );
-
+  const testcasesFormat=document.getElementsByClassName("cm-content")[0].innerText;
+  const question = document.getElementsByClassName("elfjS")[0].innerText;
   if (editorContainer) {
     console.log("Editor container found.");
     const lines = [];
@@ -29,10 +30,19 @@ function extractSortAndTrimCode() {
     }
 
     console.log("Trimmed Code:", sortedCode);
+    console.log("Question:", question);
+    console.log("Testcases Format:", testcasesFormat);
     // Uncomment this line if you want to save to storage
-     chrome.storage.local.set({ extractedCode: sortedCode }, function () {
-       console.log("Code saved to storage.");
-     });
+    chrome.storage.local.set({ question: question }, function () {
+      console.log("Question saved to storage.");
+    });
+    chrome.storage.local.set({ testcasesFormat: testcasesFormat }, function () {
+      console.log("Testcases saved to storage.");
+    });
+
+    chrome.storage.local.set({ extractedCode: sortedCode }, function () {
+      console.log("Code saved to storage.");
+    });
     return "";
   } else {
     console.log("Editor container not found.");
